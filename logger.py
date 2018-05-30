@@ -13,11 +13,11 @@ def make_logger(stream=sys.stderr, log_file_name=None):
     # stream_handler.setFormatter(log_formatter)
     # stream_handler.setLevel(logging.INFO)
 
-    file_handler_info = RotatingFileHandler(log_file_name+".log", maxBytes=2000000)
+    file_handler_info = RotatingFileHandler(log_file_name+".log", maxBytes=200000)
     file_handler_info.setFormatter(log_formatter)
     file_handler_info.setLevel(logging.INFO)
 
-    file_handler_critical = RotatingFileHandler(log_file_name+".err", maxBytes=2000000)
+    file_handler_critical = RotatingFileHandler(log_file_name+".err", maxBytes=200000)
     file_handler_critical.setFormatter(log_formatter)
     file_handler_critical.setLevel(logging.CRITICAL)
 
